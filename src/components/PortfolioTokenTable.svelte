@@ -29,7 +29,7 @@
 				</div>
 
 				<div class="text-center font-extrabold basis-1/4">
-					<p>{token.value.price.toFixed(2)}</p>
+					<p>{(token.value.price * usdValue).toFixed(2)}</p>
 					<p
 						class="{parseFloat(token.value.pricePercentChange1d.toString().substr(0, 5)) > 0
 							? 'text-green-600'
