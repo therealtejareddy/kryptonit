@@ -4,6 +4,7 @@
 	let myChart;
 	export let labels;
 	export let dataSets;
+	export let usdValue;
 	onMount(() => {
 		myChart = new Chart('myChart', {
 			type: 'doughnut',
@@ -11,7 +12,7 @@
 				labels: labels,
 				datasets: [
 					{
-						data: dataSets,
+						data: dataSets.map(dataset=>dataset*usdValue),
 						hoverOffset: 4
 					}
 				]

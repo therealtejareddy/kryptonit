@@ -62,7 +62,7 @@
 						portfolioValue += res.value.marketValue;
 						coingeckoIds.push(res.coingeckoId);
 						labels.push(res.name);
-						dataSets.push(res.value.marketValue * usdRes);
+						dataSets.push(res.value.marketValue);
 					}
 				}
 			}
@@ -71,7 +71,7 @@
 			portfolioValue += coinres.nativeBalance.value.marketValue; //
 			coingeckoIds.push(coinres.nativeBalance.coingeckoId); //
 			labels.push(coinres.nativeBalance.name); //
-			dataSets.push(coinres.nativeBalance.value.marketValue * usdRes); //
+			dataSets.push(coinres.nativeBalance.value.marketValue); //
 			return [
 				tokenPortfolio,
 				labels,
@@ -125,7 +125,7 @@
 						portfolioValue={tokenPortfolio[5]}
 						usdValue={tokenPortfolio[6]}
 					/>
-					<DonutChart labels={tokenPortfolio[1]} dataSets={tokenPortfolio[2]} />
+					<DonutChart labels={tokenPortfolio[1]} dataSets={tokenPortfolio[2]} usdValue={tokenPortfolio[6]}/>
 				</div>
 				<PortfolioTokenTable
 					tokens={tokenPortfolio[0]}
