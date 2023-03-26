@@ -62,7 +62,7 @@
 						portfolioValue += res.value.marketValue;
 						coingeckoIds.push(res.coingeckoId);
 						labels.push(res.name);
-						dataSets.push(res.value.marketValue);
+						dataSets.push(res.value.marketValue * usdRes);
 					}
 				}
 			}
@@ -71,7 +71,7 @@
 			portfolioValue += coinres.nativeBalance.value.marketValue; //
 			coingeckoIds.push(coinres.nativeBalance.coingeckoId); //
 			labels.push(coinres.nativeBalance.name); //
-			dataSets.push(coinres.nativeBalance.value.marketValue); //
+			dataSets.push(coinres.nativeBalance.value.marketValue * usdRes); //
 			return [
 				tokenPortfolio,
 				labels,

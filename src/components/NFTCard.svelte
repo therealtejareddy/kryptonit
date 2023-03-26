@@ -24,7 +24,7 @@
 				<a
 					target="_blank"
 					class="text-blue-700"
-					href={`https://etherscan.io/token/${address}`}
+					href={`https://polygonscan.com/token/${address}`}
 					rel="noreferrer">{`${address.slice(0, 4)}...${address.slice(address.length - 4)}`}</a
 				>
 			</div>
