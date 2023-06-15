@@ -11,7 +11,7 @@
 	userAddress.subscribe((v) => {
 		userAddr = v;
 		fetch(
-			'https://deep-index.moralis.io/api/v2/0x9f30aA06Cd0436B2237CC2e35f86C099ba7e2489/nft/transfers?chain=polygon&format=decimal&direction=both',
+			`https://deep-index.moralis.io/api/v2/${userAddr}/nft/transfers?chain=polygon&format=decimal&direction=both`,
 			options
 		)
 			.then((response) => response.json())
